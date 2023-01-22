@@ -1,0 +1,9 @@
+ny_taxi_postgres_data/
+*.gz
+*.csv
+*.json
+*.sh
+*.csv
+.vscode
+.venv
+*.json
