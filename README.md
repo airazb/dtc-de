@@ -13,7 +13,7 @@ Learning (week 1):
 - Create venv for python project
   
 ## Run docker
-[Create docker container and run](dockerfile)
+[Create docker container and run](Dockerfile)
 
 ## Create pipeline
 [Create EL pipeline for load data to pgsql](ingest_data.py)
@@ -34,4 +34,6 @@ where
 and lpep_pickup_datetime >= TO_DATE('2019-01-21', 'yyyy-MM-dd')   
 ```
 
+Very good notes from last cohort:
+* [Notes from Alvaro Navas](https://github.com/ziritrion/dataeng-zoomcamp/blob/main/notes/1_intro.md)
 
