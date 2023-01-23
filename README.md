@@ -2,10 +2,10 @@
 
 Learning (week 1):
 * Docker and SQL
-  * [Install and setup](#install-&-setup)
+  * [Install and setup](#install-setup)
   * [Run docker](#run-docker)
   * [Create pipeline](#create-pipeline)
-  * [SQL for analysis data]()
+  * [SQL for analysis data](#sql)
 
 ## Install & setup
 - Install docker
