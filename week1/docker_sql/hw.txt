@@ -1,0 +1,57 @@
+1)
+--iidfile string          Write the image ID to the file
+
+2)
+Understanding docker first run
+3 modules
+
+3)
+root@localhost:ny_taxi> select count(1) from green_taxi_trips where lpep_dropoff_datetime < TO_DATE('2019-01-16','yyyy-MM-dd') and lpep_pickup_datetime >= TO_DATE('2019-01-15', 'yyyy-MM-dd')
++-------+
+| count |
+|-------|
+| 20530 |
++-------+
+SELECT 1
+Time: 0.143s
+
+4) select lpep_pickup_datetime, trip_distance from green_taxi_trips where lpep_pickup_datetime between to_Date('20190110','yyyyMMdd') and to_date('20190129','yyyyMMdd') order by trip_distance desc limit 10  
+2019-01-18
+
+5) 
+root@localhost:ny_taxi> select date_trunc('DAY',lpep_pickup_datetime) dt, passenger_count, count(1) cnt from green_taxi_trips where lpep_pickup_datetime between to_Date('20190101','yyyyMMdd') and to_date('20190102','yyyyMMdd') group 
+  by date_trunc('DAY',lpep_pickup_datetime), passenger_count
++---------------------+-----------------+-------+
+| dt                  | passenger_count | cnt   |
+|---------------------+-----------------+-------|
+| 2019-01-01 00:00:00 | 3               | 254   |
+| 2019-01-01 00:00:00 | 2               | 1282  |
+| 2019-01-01 00:00:00 | 6               | 273   |
+| 2019-01-01 00:00:00 | 4               | 129   |
+| 2019-01-01 00:00:00 | 0               | 21    |
+| 2019-01-01 00:00:00 | 5               | 616   |
+| 2019-01-01 00:00:00 | 1               | 12415 |
++---------------------+-----------------+-------+
+
+6)Long Island City/Queens Plaza
+
+SELECT 3
+Time: 0.087s
+root@localhost:ny_taxi> SELECT
+     Tip_amount,
+     zpu."Zone" pickup_loc,
+     zdo."Zone" dropoff_loc
+ FROM
+     green_taxi_trips t LEFT JOIN zones zpu
+         ON t."PULocationID" = zpu."LocationID"
+     LEFT JOIN zones zdo
+         ON t."DOLocationID" = zdo."LocationID"
+ where zpu."Zone" = 'Astoria'
+
+ order by (Tip_amount) desc
+ LIMIT 1;
++------------+------------+-------------------------------+
+| tip_amount | pickup_loc | dropoff_loc                   |
+|------------+------------+-------------------------------|
+| 88.0       | Astoria    | Long Island City/Queens Plaza |
++------------+------------+-------------------------------+
