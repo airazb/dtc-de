@@ -7,3 +7,6 @@
 [Learning (week 2)](/week2/):
 * Google Cloud
 * Prefect
+
+[Learning (week 3)](/week3/):
+* BigQuery
