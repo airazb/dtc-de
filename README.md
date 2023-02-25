@@ -10,3 +10,7 @@
 
 [Learning (week 3)](/week3/):
 * BigQuery
+
+[Learning (week 34)](/week4/):
+* dbt
+* visualyze with metabase and looker
