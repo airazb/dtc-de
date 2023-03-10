@@ -14,3 +14,7 @@
 [Learning (week 4)](/week4/):
 * dbt
 * visualyze with metabase and looker
+
+[Learning (week 45)](/week5/):
+* run Spark (local)
+* run Spark Cluster
