@@ -15,6 +15,10 @@
 * dbt
 * visualyze with metabase and looker
 
-[Learning (week 45)](/week5/):
+[Learning (week 5)](/week5/):
 * run Spark (local)
 * run Spark Cluster
+
+[Learning (week 6)](/week6/):
+* Kafka
+* Faust
